@@ -4,7 +4,7 @@ RUN apt-get -qq update && \
     apt-get install -y gcc g++ make xz-utils wget vim libtinfo5 git python3 libgmp-dev libtinfo-dev zlib1g-dev locales haskell-platform
 
 RUN wget --no-check-certificate "https://github.com/llvm/llvm-project/releases/download/llvmorg-9.0.1/clang+llvm-9.0.1-armv7a-linux-gnueabihf.tar.xz" \
-		&& wget "https://downloads.haskell.org/~ghc/8.10.4/ghc-8.10.4-armv7-deb10-linux.tar.xz" \
+		&& wget --no-check-certificate "https://downloads.haskell.org/~ghc/8.10.4/ghc-8.10.4-armv7-deb10-linux.tar.xz" \
 		&& tar xvf clang+llvm-9.0.1-armv7a-linux-gnueabihf.tar.xz \
 		&& tar xvf ghc-8.10.4-armv7-deb10-linux.tar.xz
 

@@ -3,7 +3,7 @@ FROM arm32v7/ubuntu:20.04
 RUN apt-get -qq update && \
     apt-get install -y gcc g++ make xz-utils curl vim libtinfo5 git python3 libgmp-dev libtinfo-dev zlib1g-dev locales haskell-platform
 
-RUN curl "https://github.com/llvm/llvm-project/releases/download/llvmorg-9.0.1/clang+llvm-9.0.1-armv7a-linux-gnueabihf.tar.xz" -o clang+llvm-9.0.1-armv7a-linux-gnueabihf.tar.xz \
+RUN curl --insecure "https://github.com/llvm/llvm-project/releases/download/llvmorg-9.0.1/clang+llvm-9.0.1-armv7a-linux-gnueabihf.tar.xz" -o clang+llvm-9.0.1-armv7a-linux-gnueabihf.tar.xz \
 		&& curl "https://downloads.haskell.org/~ghc/8.10.4/ghc-8.10.4-armv7-deb10-linux.tar.xz" -o ghc-8.10.4-armv7-deb10-linux.tar.xz \
 		&& tar xvf clang+llvm-9.0.1-armv7a-linux-gnueabihf.tar.xz \
 		&& tar xvf ghc-8.10.4-armv7-deb10-linux.tar.xz
